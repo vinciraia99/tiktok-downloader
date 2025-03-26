@@ -1,0 +1,7 @@
+.vscode
+/vendor/
+composer.lock
+/*.php
+drivers
+/*.cache
+php.ini

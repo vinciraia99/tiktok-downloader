@@ -1,0 +1,29 @@
+{
+    "name": "vinciraia99/tiktok",
+    "description": "Tiktok video downloader",
+    "type": "library",
+    "require": {
+        "symfony/browser-kit": "^6.3",
+        "symfony/http-client": "^6.3",
+        "symfony/css-selector": "^6.3",
+        "symfony/mime": "^6.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TikTok\\": "./src"
+        }
+    },
+    "authors": [
+        {
+            "name": "vinciraia99",
+            "email": "vr.99@ik.me"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "pestphp/pest": "^1.21",
+        "vimeo/psalm": "^5",
+        "danog/phpdoc": "^0.1.22"
+    }
+}
