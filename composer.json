@@ -3,10 +3,12 @@
     "description": "Tiktok video downloader",
     "type": "library",
     "require": {
+        "php": "^8.0",
         "symfony/browser-kit": "^6.3",
         "symfony/http-client": "^6.3",
         "symfony/css-selector": "^6.3",
-        "symfony/mime": "^6.3"
+        "symfony/mime": "^6.3",
+        "ext-dom": "*"
     },
     "license": "MIT",
     "autoload": {
@@ -20,10 +22,5 @@
             "email": "vr.99@ik.me"
         }
     ],
-    "minimum-stability": "stable",
-    "require-dev": {
-        "pestphp/pest": "^1.21",
-        "vimeo/psalm": "^5",
-        "danog/phpdoc": "^0.1.22"
-    }
+    "minimum-stability": "stable"
 }
