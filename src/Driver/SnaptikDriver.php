@@ -19,7 +19,7 @@ class SnaptikDriver implements DriverInterface
         $browser = $this->getBrowser();
 
         $crawler = $browser
-            ->request('GET', 'https://snaptik.app/vn')
+            ->request('GET', 'https://snaptik.app/vn2')
             ->filter('form')
             ->first();
 
