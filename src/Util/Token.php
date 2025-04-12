@@ -34,8 +34,21 @@ final class Token
             $r .= chr((int) ((int) base_convert($s, $e, 10) - $t));
         }
 
-        preg_match(self::TOKEN_REGEX, $r, $matches);
+        //preg_match(self::TOKEN_REGEX, $r, $matches);
 
-        return array_pop($matches);
+        //return array_pop($matches);
+
+        return self::extractDownloadUrl($r);
+    }
+
+    private static function extractDownloadUrl($text) {
+        // Cerca l'URL che inizia con https://d.rapidcdn.app/v2?token=
+        $pattern = '/https:\/\/d\.rapidcdn\.app\/v2\?token=[^"\s]+/';
+
+        if (preg_match($pattern, $text, $matches)) {
+            return $matches[0];
+        }
+
+        return null;
     }
 }

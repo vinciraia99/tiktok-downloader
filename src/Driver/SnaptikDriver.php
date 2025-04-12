@@ -35,8 +35,12 @@ class SnaptikDriver implements DriverInterface
         /** @var \Symfony\Component\BrowserKit\Response */
         $response = $browser->getResponse();
 
-        $token = Token::extract($response->getContent());
+        $content = $response->getContent();
 
-        return $token ? sprintf('%s/?token=%s&dl=1', self::CDN_URL, $token) : false;
+        $token = Token::extract($content);
+
+        return $token != null ? $token : false;
+
+        //return $token ? sprintf('%s/?token=%s&dl=1', self::CDN_URL, $token) : false;
     }
 }
