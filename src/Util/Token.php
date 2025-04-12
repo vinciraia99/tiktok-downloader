@@ -6,7 +6,7 @@ final class Token
 {
     private const PARAM_REGEX = '/\("([a-zA-Z]+)",[0-9]+,"([a-zA-Z]+)",([0-9]+),([0-9]+),[0-9]+\)/';
 
-    private const TOKEN_REGEX = '/token=([a-zA-Z0-9._-]+)/';
+    //private const TOKEN_REGEX = '/token=([a-zA-Z0-9._-]+)/';
 
     /**
      * @return string|false
@@ -42,7 +42,6 @@ final class Token
     }
 
     private static function extractDownloadUrl($text) {
-        // Cerca l'URL che inizia con https://d.rapidcdn.app/v2?token=
         $pattern = '/https:\/\/d\.rapidcdn\.app\/v2\?token=[^"\s]+/';
 
         if (preg_match($pattern, $text, $matches)) {

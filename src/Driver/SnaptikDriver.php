@@ -12,7 +12,7 @@ class SnaptikDriver implements DriverInterface
 {
     use Crawlable;
 
-    const CDN_URL = 'https://d.rapidcdn.app//v2';
+    //const CDN_URL = 'https://d.rapidcdn.app//v2';
 
     public function handle(string $url)
     {
